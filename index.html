@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="topo">
+      <h1>Minhas Tarefas</h1>
+      <button id="botao-tema" title="Alternar modo escuro">🌙</button>
+    </div>
+
+    <div class="nova-tarefa">
+      <input type="text" id="campo-tarefa" placeholder="Digite uma tarefa...">
+      <select id="campo-prioridade">
+        <option value="alta">Alta</option>
+        <option value="media" selected>Média</option>
+        <option value="baixa">Baixa</option>
+      </select>
+      <input type="date" id="campo-data">
+      <button id="botao-adicionar">Adicionar</button>
+    </div>
+
+    <div class="filtros">
+      <button class="filtro ativo" data-filtro="todas">Todas</button>
+      <button class="filtro" data-filtro="pendentes">Pendentes</button>
+      <button class="filtro" data-filtro="concluidas">Concluídas</button>
+    </div>
+
+    <ul id="lista-tarefas"></ul>
+
+    <div class="rodape">
+      <span id="contador">0 pendentes</span>
+      <button id="botao-limpar">Limpar concluídas</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
